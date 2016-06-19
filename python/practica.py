@@ -10,8 +10,8 @@ class restaurant:
 
     def afegir_nom(self,nom):
         self.nom = nom
-    def afegir_sect(self,nom):
-        self.sect = nom
+    def afegir_sect(self,sect):
+        self.sect = sect
 
     #def afegir_adre(self,nom):
      #   self.nom = nom
@@ -42,7 +42,7 @@ class MHTMLParser(HTMLParser):
     def handle_data(self, data):
         if self.ctag == 'v:fn':
             self.crest.afegir_nom(data)
-        elif self.ctag == 'v:section':
+        elif self.ctag == 'xv:section':
             self.crest.afegir_sect(data)
 
         #elif self.ctag == 'v:adapted':
